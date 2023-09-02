@@ -1,0 +1,90 @@
+/* Basic Reset (optional but recommended) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;  /* Or whichever font you're using for body text */
+    color: #1A1A1A;
+    background-color: #FFFFFF;
+}
+
+/* Links and Clickable Text */
+
+a {
+    color: #517EA0;
+    text-decoration: none;  /* Removes underline, but you can retain it if preferred */
+    transition: color 0.3s ease;  /* Smoothens the hover effect */
+}
+
+a:hover {
+    color: #406685;
+    text-decoration: underline;  /* Underline on hover can help with accessibility */
+}
+
+a:visited {
+    color: #697C8E;
+}
+
+/* Buttons */
+
+button.primary {
+    background-color: #517EA0;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.primary:hover {
+    background-color: #406685;
+}
+
+button.secondary {
+    background-color: #FFFFFF;
+    color: #517EA0;
+    border: 2px solid #517EA0;
+    padding: 8px 18px;  /* Adjusted padding to account for border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.secondary:hover {
+    background-color: #517EA0;
+    color: #FFFFFF;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1A1A1A;
+    color: #D9D9D9;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #517EA0;
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+    color: #FFFFFF;
+}
+
+/* Additional Colors for Alerts (if needed) */
+
+.alert-warning {
+    background-color: #B89A6A;
+    color: #1A1A1A;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-error {
+    background-color: #A84747;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+}
