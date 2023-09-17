@@ -24,44 +24,6 @@
 
 // -->
 
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
+// Minified:
 
-const textArray = ["marketing.", "legal.", "design.", "consulting.", "social media.",];
-const typingDelay = 100;
-const erasingDelay = 100;
-const newTextDelay = 1500; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-  	setTimeout(erase, newTextDelay);
-  }
-}
-
-function erase() {
-	if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 50);
-});
+const a=document.querySelector(".typed-text"),b=document.querySelector(".cursor"),c=["marketing.","legal.","design.","consulting.","social media."],d=100,e=100,f=1500;let g=0,h=0;function j(){if(h<c[g].length){if(!b.classList.contains("typing"))b.classList.add("typing");a.textContent+=c[g].charAt(h),h++,setTimeout(j,d)}else b.classList.remove("typing"),setTimeout(k,f)}function k(){if(h>0){if(!b.classList.contains("typing"))b.classList.add("typing");a.textContent=c[g].substring(0,h-1),h--,setTimeout(k,e)}else b.classList.remove("typing"),g++,g>=c.length&&(g=0),setTimeout(j,d+1100)}document.addEventListener("DOMContentLoaded",function(){c.length&&setTimeout(j,f+50)});
