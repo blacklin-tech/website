@@ -42,10 +42,12 @@ header {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo h1 {
+.logo-text {
     font-size: 24px;
     margin-left: 10px;
     font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
 }
 
 nav ul {
@@ -69,13 +71,24 @@ nav li a:hover {
         align-items: flex-start;
     }
 
-    .logo h1 {
-        font-size: 20px;
+    .logo {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .logo-text {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
     }
 
     nav ul {
-        margin-top: 10px;
-        gap: 10px;
+        margin-top: 16px;
+        gap: 8px;
+        justify-content: space-around;
     }
 }
 
@@ -83,6 +96,7 @@ nav li a:hover {
 main {
     padding: 20px 5%;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 section {
@@ -205,5 +219,26 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
 @media (max-width: 768px) {
     #break {
         display: block; /* or whatever the desired display value is, e.g., 'flex', 'inline', etc. */
+    }
+}
+
+header, main, footer {
+    margin: auto;
+    max-width: 1400px;
+}
+
+.form-container {
+    height: 1000px;
+}
+
+@media (max-width: 640px) {
+    .form-container {
+        height: 1080px;
+    }
+}
+
+@media (max-width: 440px) {
+    .form-container {
+        height: 1120px;
     }
 }
