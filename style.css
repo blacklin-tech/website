@@ -160,6 +160,7 @@ footer {
 
 footer p {
     margin: 10px 0;
+    text-align: center;
 }
 
 .footer-links a {
@@ -241,4 +242,16 @@ header, main, footer {
     .form-container {
         height: 1120px;
     }
+}
+
+.body-content {
+    max-width: 65ch;
+}
+
+.body-content h3 {
+    margin-left: 24px;
+}
+
+.body-content p {
+    margin-left: 32px;
 }
