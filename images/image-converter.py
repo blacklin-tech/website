@@ -19,4 +19,4 @@ def convert_png_to_webp(directory, quality=90, lossless=False, resize=None):
     print("Conversion complete!")
 
 # Usage example
-convert_png_to_webp('.', quality=85, lossless=False)
+convert_png_to_webp('../', quality=85, lossless=False)
